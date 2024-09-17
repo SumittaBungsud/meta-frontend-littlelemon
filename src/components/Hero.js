@@ -13,29 +13,27 @@ function Hero() {
           position: "relative",
         }}
       >
-        <article className="hero-article">
+        <section className="hero-container">
           <h1
             style={{
               fontSize: "3.4rem",
-              fontFamily: "sans-serif",
               color: "#F4CE14",
             }}
           >
             Little Lemon
           </h1>
-          <h4
+          <p
             style={{
               fontSize: "1.8rem",
-              fontFamily: "sans-serif",
-              color: "#ffffff",
+              color: "#f0f0f0",
+              lineHeight: 0,
             }}
           >
             Chicago
-          </h4>
+          </p>
           <p
             style={{
               width: "27rem",
-              textAlign: "left",
               fontSize: "1.2rem",
               color: "#ffffff",
             }}
@@ -55,7 +53,7 @@ function Hero() {
           >
             Reserve a Table
           </button>
-        </article>
+        </section>
         <img src={heroImg} alt="restaurant food" />
       </div>
     </section>
