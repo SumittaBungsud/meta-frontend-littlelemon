@@ -1,3 +1,8 @@
+:root {
+  --heightFoodCard: 184px;
+  --widthFoodCard: 289px;
+}
+
 .App {
   text-align: center;
 }
@@ -28,7 +33,13 @@ nav li a {
   padding: 1.5rem;
 }
 
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1 fr);
+}
+
 .hero {
+  grid-column: 3 / span 10;
   display: flex;
   flex-direction: row;
   align-self: flex-start;
@@ -40,12 +51,69 @@ nav li a {
   position: absolute;
   border-radius: 1.3rem;
   top: 3.2em;
-  right: 23vw;
+  right: 16vmax;
 }
 
 .hero-container {
   font-family: sans-serif;
   text-align: left;
-  padding-left: 32rem;
+  padding-left: 16vmax;
   padding-bottom: 24rem;
 }
+
+.foodCard-container {
+  width: var(--widthFoodCard);
+  padding-right: 2.5rem;
+}
+.foodCard {
+  height: calc(var(--heightFoodCard) * 2.5);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #ebebeb;
+}
+.foodCard > img {
+  height: var(--heightFoodCard);
+  object-fit: cover;
+}
+.foodCard > article {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 17px;
+}
+.foodCard-footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.highlight-container {
+  padding: auto;
+  margin: 10rem 16vmax;
+}
+.highlight-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+  justify-content: space-between;
+  align-items: center;
+}
+.highlight-header > h1 {
+  font-size: 2.5em;
+}
+.highlight-header > button {
+  margin-right: 3em;
+  padding: 1.2em 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 0.5em;
+  background-color: #f4ce14;
+}
+
+/* border: 2px solid #000000; */

@@ -1,10 +1,12 @@
 import React from "react";
 import Hero from "./Hero";
+import Highlight from "./Highlight";
 
 function Main() {
   return (
-    <main>
+    <main className="main-container">
       <Hero />
+      <Highlight />
     </main>
   );
 }
