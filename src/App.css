@@ -1,6 +1,10 @@
 :root {
+  --widthHero: 407px;
+
   --heightFoodCard: 184px;
   --widthFoodCard: 289px;
+
+  --widthReviewBlog: 415px;
 }
 
 .App {
@@ -8,10 +12,14 @@
 }
 
 header {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 3rem 0;
+  background-color: #f7f7f7;
+  padding: 2rem 0;
+  position: fixed;
+  z-index: 100;
 }
 
 header img {
@@ -43,11 +51,12 @@ nav li a {
   display: flex;
   flex-direction: row;
   align-self: flex-start;
+  margin-top: 8em;
 }
 
 .hero img {
-  width: 407px;
-  height: 407px;
+  width: var(--widthHero);
+  height: var(--widthHero);
   position: absolute;
   border-radius: 1.3rem;
   top: 3.2em;
@@ -104,7 +113,7 @@ nav li a {
   align-items: center;
 }
 .highlight-header > h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .highlight-header > button {
   margin-right: 3em;
@@ -114,6 +123,42 @@ nav li a {
   border-width: 0;
   border-radius: 0.5em;
   background-color: #f4ce14;
+}
+
+.testimonial {
+  width: 100vw;
+  background-color: #ebebeb;
+  padding: 5em 0 0 0;
+}
+.testimonial article {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  justify-content: stretch;
+}
+.review-blog {
+  min-width: var(--widthReviewBlog);
+  padding: 1em 2em;
+  margin: 4em 1.2em;
+  background-color: #ffffff;
+  border-radius: 1.7em;
+}
+.review-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  margin-right: 2.3em;
+  color: #5b5b5b;
+  background-color: #e0e0e0;
+}
+
+.about-container article {
+  text-align: start;
+  width: var(--widthHero);
 }
 
 /* border: 2px solid #000000; */

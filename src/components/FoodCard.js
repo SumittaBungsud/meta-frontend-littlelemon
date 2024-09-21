@@ -25,6 +25,7 @@ function FoodCard({ menu }) {
             <div
               style={{
                 textAlign: "start",
+                padding: "0 15px",
               }}
             >
               <p>{menu.description}</p>
