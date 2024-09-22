@@ -1,3 +1,11 @@
+import {
+  faSquareFacebook,
+  faInstagram,
+  faLine,
+  faTiktok,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+
 export const navigations = [
   {
     name: "Home",
@@ -44,26 +52,26 @@ export const socialMedias = [
   {
     name: "Facebook",
     link: "https://www.facebook.com",
-    icon: "",
+    icon: faSquareFacebook,
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com",
-    icon: "",
+    icon: faInstagram,
   },
   {
     name: "Line",
     link: "https://access.line.me",
-    icon: "",
+    icon: faLine,
   },
   {
     name: "Tiktok",
     link: "https://tiktok.com",
-    icon: "",
+    icon: faTiktok,
   },
   {
     name: "Youtube",
     link: "https://youtube.com",
-    icon: "",
+    icon: faYoutube,
   },
 ];

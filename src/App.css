@@ -206,7 +206,7 @@ nav li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #dedede;
+  background-color: #2f2f2f;
   width: 100vw;
   padding: 8vmax 0;
 }
@@ -221,7 +221,25 @@ nav li a {
   justify-content: space-around;
 }
 .footer-body-item {
-  margin-right: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 6em;
+  color: #d1d1d1;
+}
+.footer-body-item h4 {
+  line-height: 0;
+}
+.footer-body-item ul {
+  text-align: left;
+  list-style-type: none;
+}
+.footer-body-item li {
+  padding: 2px 0;
+}
+.footer-body-item a {
+  color: #d1d1d1;
+  text-decoration: none;
 }
 
 /* border: 2px solid #000000; */
