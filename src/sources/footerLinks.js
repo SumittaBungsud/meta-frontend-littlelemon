@@ -9,27 +9,27 @@ import {
 export const navigations = [
   {
     name: "Home",
-    link: "#home",
+    link: "/",
   },
   {
     name: "About",
-    link: "#about",
+    link: "/#about",
   },
   {
     name: "Menu",
-    link: "",
+    link: "/menu",
   },
   {
     name: "Reservation",
-    link: "",
+    link: "/reservation",
   },
   {
     name: "Order Online",
-    link: "",
+    link: "/delivery",
   },
   {
     name: "Login",
-    link: "",
+    link: "/auth/login",
   },
 ];
 

@@ -41,19 +41,7 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button
-            className="button"
-            style={{
-              backgroundColor: "#F4CE14",
-              fontSize: "1.2rem",
-              fontWeight: "bold",
-              borderWidth: "0",
-              borderRadius: "8px",
-              padding: "0.8rem 1.5rem",
-            }}
-          >
-            Reserve a Table
-          </button>
+          <button className="button">Reserve a Table</button>
         </section>
         <img src={heroImg} alt="restaurant food" />
       </div>
