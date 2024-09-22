@@ -5,6 +5,9 @@
   --widthFoodCard: 289px;
 
   --widthReviewBlog: 415px;
+
+  --widthAbout: 320px;
+  --heightAbout: 240px;
 }
 
 .App {
@@ -156,9 +159,43 @@ nav li a {
   background-color: #e0e0e0;
 }
 
-.about-container article {
+.about-body article {
   text-align: start;
   width: var(--widthHero);
+}
+.about-body article > h1 {
+  font-size: 3.4em;
+  color: #f4ce14;
+}
+.about-body article > h4 {
+  font-size: 1.8em;
+  color: #495e57;
+  line-height: 0;
+  margin-bottom: 4rem;
+}
+.about-body article > p {
+  color: #6f6f6f;
+}
+.about-body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 8vmax 16vmax;
+}
+.aboutImg {
+  width: var(--widthAbout);
+  height: var(--heightAbout);
+  object-fit: cover;
+  position: absolute;
+}
+.about-img1 {
+  top: 18vmax;
+  box-shadow: -6px 3px 20px #5b5b5b;
+}
+.about-img2 {
+  top: 10vmax;
+  right: 16vmax;
+  box-shadow: -6px 3px 20px #5b5b5b;
 }
 
 /* border: 2px solid #000000; */

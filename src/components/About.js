@@ -1,9 +1,11 @@
 import React from "react";
+import resImg from "../img/restaurant.jpg";
+import chefImg from "../img/restaurant chef B.jpg";
 
 function About() {
   return (
     <section className="about-container">
-      <div style={{ position: "relative", padding: "0 16vmax" }}>
+      <div className="about-body">
         <article>
           <h1 style={{ lineHeight: "0" }}>Little Lemon</h1>
           <h4>Chicago</h4>
@@ -17,11 +19,13 @@ function About() {
             gusto.
           </p>
         </article>
-        <div>
-          <img alt="restaurant1" />
-        </div>
-        <div>
-          <img alt="restaurant2" />
+        <div style={{ marginLeft: "6em" }}>
+          <img className="aboutImg about-img1" src={resImg} alt="restaurant" />
+          <img
+            className="aboutImg about-img2"
+            src={chefImg}
+            alt="restaurant chef B"
+          />
         </div>
       </div>
     </section>
