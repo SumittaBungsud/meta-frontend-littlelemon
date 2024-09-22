@@ -4,7 +4,7 @@ import chefImg from "../img/restaurant chef B.jpg";
 
 function About() {
   return (
-    <section className="about-container">
+    <section id="about" className="about-container">
       <div className="about-body">
         <article>
           <h1 style={{ lineHeight: "0" }}>Little Lemon</h1>

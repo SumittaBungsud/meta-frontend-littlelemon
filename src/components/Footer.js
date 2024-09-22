@@ -15,7 +15,7 @@ function Footer() {
           <ul>
             {navigations.map((item) => (
               <li>
-                <a>{item.name}</a>
+                <a href={item.link}>{item.name}</a>
               </li>
             ))}
           </ul>

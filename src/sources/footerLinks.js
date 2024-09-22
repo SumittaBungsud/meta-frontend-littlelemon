@@ -9,11 +9,11 @@ import {
 export const navigations = [
   {
     name: "Home",
-    link: "",
+    link: "#home",
   },
   {
     name: "About",
-    link: "",
+    link: "#about",
   },
   {
     name: "Menu",

@@ -3,7 +3,7 @@ import heroImg from "../img/restauranfood.jpg";
 
 function Hero() {
   return (
-    <section>
+    <section id="home">
       <div
         className="hero"
         style={{
@@ -42,6 +42,7 @@ function Hero() {
             traditional recipes served with a modern twist.
           </p>
           <button
+            className="button"
             style={{
               backgroundColor: "#F4CE14",
               fontSize: "1.2rem",

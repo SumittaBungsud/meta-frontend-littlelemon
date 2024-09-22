@@ -5,7 +5,9 @@ import logoImg from "../img/Logo.svg";
 function Header() {
   return (
     <header>
-      <img src={logoImg} alt="little lemon logo" />
+      <a href="#home">
+        <img src={logoImg} alt="little lemon logo" />
+      </a>
       <Nav />
     </header>
   );

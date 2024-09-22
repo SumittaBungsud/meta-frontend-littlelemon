@@ -23,14 +23,14 @@ header {
   flex-direction: row;
   justify-content: center;
   background-color: #f7f7f7;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   position: fixed;
   z-index: 100;
 }
 
 header img {
   width: 13rem;
-  padding: 0 4rem;
+  padding: 1rem 4rem;
 }
 
 nav ul {
@@ -38,13 +38,21 @@ nav ul {
   flex-direction: row;
   list-style: none;
 }
-
+nav li {
+  padding: 1rem 0;
+}
 nav li a {
+  padding: 1rem 1.5rem;
   font-weight: 700;
   font-size: large;
   text-decoration: none;
   color: #000000;
-  padding: 1.5rem;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #ee9972;
+  border-radius: 0.5rem;
 }
 
 .main-container {
@@ -59,21 +67,28 @@ nav li a {
   align-self: flex-start;
   margin-top: 8em;
 }
-
 .hero img {
   width: var(--widthHero);
   height: var(--widthHero);
   position: absolute;
+  box-shadow: 0 3px 35px #5b5b5b;
   border-radius: 1.3rem;
   top: 3.2em;
   right: 16vmax;
 }
-
 .hero-container {
   font-family: sans-serif;
   text-align: left;
   padding-left: 16vmax;
   padding-bottom: 24rem;
+}
+.hero-container > button {
+  background-color: #f4ce14;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
 }
 
 .foodCard-container {
@@ -240,6 +255,9 @@ nav li a {
 .footer-body-item a {
   color: #d1d1d1;
   text-decoration: none;
+}
+.footer-body-item a:hover {
+  color: #ffffff;
 }
 
 /* border: 2px solid #000000; */

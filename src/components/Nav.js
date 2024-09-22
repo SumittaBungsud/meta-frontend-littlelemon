@@ -1,27 +1,17 @@
 import React from "react";
+import { navigations } from "../sources/footerLinks";
 
 function Nav() {
   return (
     <nav>
       <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Order online</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
+        {navigations.map((item) => (
+          <li>
+            <a className="button" href={item.link}>
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

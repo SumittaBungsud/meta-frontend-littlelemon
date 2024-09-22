@@ -33,7 +33,7 @@ function Highlight() {
     <section className="highlight-container">
       <div className="highlight-header">
         <h1>This weeks specials!</h1>
-        <button>Online Menu</button>
+        <button className="button">Online Menu</button>
       </div>
       <div
         style={{
