@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import logoImg from "..//img/Logo.svg";
+import logoImg from "../img/Logo.svg";
 
 function Header() {
   return (

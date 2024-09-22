@@ -8,6 +8,9 @@
 
   --widthAbout: 320px;
   --heightAbout: 240px;
+
+  --widthFooterLogo: 89;
+  --heightFooterLogo: 151px;
 }
 
 .App {
@@ -196,6 +199,29 @@ nav li a {
   top: 10vmax;
   right: 16vmax;
   box-shadow: -6px 3px 20px #5b5b5b;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #dedede;
+  width: 100vw;
+  padding: 8vmax 0;
+}
+.footer-logo {
+  width: var(--widthFooterLogo);
+  height: var(--heightFooterLogo);
+  margin-right: 8em;
+}
+.footer-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-body-item {
+  margin-right: 4em;
 }
 
 /* border: 2px solid #000000; */
