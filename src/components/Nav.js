@@ -6,7 +6,7 @@ function Nav() {
     <nav>
       <ul>
         {navigations.map((item) => (
-          <li>
+          <li key={item.name}>
             <a className="button" href={item.link}>
               {item.name}
             </a>

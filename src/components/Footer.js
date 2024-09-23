@@ -14,7 +14,7 @@ function Footer() {
           <h4>Doormat Navigation</h4>
           <ul>
             {navigations.map((item) => (
-              <li>
+              <li key={item.name}>
                 <a href={item.link}>{item.name}</a>
               </li>
             ))}
@@ -24,7 +24,7 @@ function Footer() {
           <h4>Contact</h4>
           <ul>
             {contacts.map((item) => (
-              <li>
+              <li key={item.name}>
                 <p style={{ lineHeight: "0" }}>{item.name} :</p>
                 <p style={{ color: "#ffffff" }}>{item.value}</p>
               </li>
@@ -35,7 +35,7 @@ function Footer() {
           <h4>Social Media</h4>
           <ul>
             {socialMedias.map((item) => (
-              <li>
+              <li key={item.name}>
                 <FontAwesomeIcon icon={item.icon} />
                 <a style={{ marginLeft: "15px" }} href={item.link}>
                   {item.name}

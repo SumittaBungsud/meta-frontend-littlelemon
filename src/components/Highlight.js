@@ -1,5 +1,5 @@
 import React from "react";
-import FoodCard from "./FoodCard";
+import FoodCard from "../elements/FoodCard";
 import greekSaladImg from "../img/greek salad.jpg";
 import bruchettaImg from "../img/bruchetta.svg";
 import dessertImg from "../img/lemon dessert.jpg";
@@ -44,7 +44,7 @@ function Highlight() {
         }}
       >
         {menuHighlight.map((menu) => (
-          <FoodCard menu={menu} />
+          <FoodCard key={menu.name} menu={menu} />
         ))}
       </div>
     </section>

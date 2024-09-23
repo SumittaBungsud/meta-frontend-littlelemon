@@ -45,7 +45,7 @@ function Testimonial() {
         </div>
         <article>
           {userReviews.map((review) => (
-            <ReviewBlog review={review} />
+            <ReviewBlog key={review.name} review={review} />
           ))}
         </article>
       </div>

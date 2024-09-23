@@ -5,7 +5,7 @@ function Delivery() {
   return (
     <div id="delivery">
       <Header />
-      <div></div>
+      <div className="container">Delivery</div>
     </div>
   );
 }
