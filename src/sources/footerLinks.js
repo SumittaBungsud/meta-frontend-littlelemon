@@ -29,7 +29,7 @@ export const navigations = [
   },
   {
     name: "Login",
-    link: "/auth/login",
+    link: "/auth",
   },
 ];
 
