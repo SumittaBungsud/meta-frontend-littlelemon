@@ -75,7 +75,7 @@
   display: flex;
   flex-direction: column;
   padding: 0.25rem 0;
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
 }
 .form-item input {
   padding: 0.5rem;
@@ -83,10 +83,10 @@
   border: 1.6px solid #989898;
   margin: 0.2rem 0;
   max-width: 20em;
-  background-color: #e7e7e7;
+  background-color: #f4f4f4;
 }
 .form-label-group {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #000000;
 }

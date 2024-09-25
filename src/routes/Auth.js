@@ -7,8 +7,8 @@ function Auth() {
   return (
     <fragment id="auth">
       <Header />
-      <form className="container">
-        <fieldset className="auth-container">
+      <section className="container">
+        <form className="auth-container">
           <section className="auth-body">
             <h3>{isLogin ? "Login" : "Signup"}</h3>
             <input id="email" name="email" type="email" placeholder="Email" />
@@ -27,8 +27,8 @@ function Auth() {
               {isLogin ? "Signup" : "Login"}
             </button>
           </section>
-        </fieldset>
-      </form>
+        </form>
+      </section>
     </fragment>
   );
 }

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import resImg from "../img/restaurant.jpg";
 
-function Reservation() {
+function BookingForm() {
+  const [currDate, setCurrDate] = useState("2024-06-05");
+
+  const handleBooking = (e) => {
+    e.preventDefault();
+    alert("Submit Form!");
+  };
+
+  useEffect(() => {
+    const minDate = new Date().toISOString().substring(0, 10);
+    setCurrDate(minDate);
+    console.log(minDate);
+  }, []);
+
   return (
     <fragment id="reservation">
       <Header />
@@ -10,16 +23,16 @@ function Reservation() {
         <h1>Reservation</h1>
         <img src={resImg} alt="restaurant" />
         <div className="reserv-body">
-          <form className="reserv-form">
+          <form onSubmit={handleBooking} className="reserv-form">
             <fieldset className="form-section section-book">
               <h2>Booking Details</h2>
               <section className="form-item">
-                <label for="select table" className="form-label-group">
+                <label htmlFor="table" className="form-label-group">
                   Select Tables
                 </label>
                 <input
-                  id="select table"
-                  name="select table"
+                  id="table"
+                  name="table"
                   type="number"
                   max={10}
                   min={1}
@@ -27,7 +40,7 @@ function Reservation() {
                 />
               </section>
               <section className="form-item">
-                <label for="people" className="form-label-group">
+                <label htmlFor="people" className="form-label-group">
                   The number of people
                 </label>
                 <input
@@ -40,41 +53,37 @@ function Reservation() {
                 />
               </section>
               <section className="form-item">
-                <label for="time" className="form-label-group">
-                  Time
+                <label htmlFor="date" className="form-label-group">
+                  Date
                 </label>
-                <input id="time" name="time" type="time" />
+                <input id="date" name="date" type="date" min={currDate} />
               </section>
               <section className="form-item">
-                <label className="form-label-group">Location</label>
-                <arguments
+                <label htmlFor="time" className="form-label-group">
+                  Time (11:00 - 21:00)
+                </label>
+                <input
+                  id="time"
+                  name="time"
+                  type="time"
+                  min="11:00"
+                  max="21:00"
+                />
+              </section>
+              <section className="form-item">
+                <label className="form-label-group">Occasion</label>
+                <select
+                  id="occasion"
+                  className="form-item"
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-around",
-                    marginTop: "0.3rem",
+                    borderRadius: "0.4rem",
+                    backgroundColor: "#f4f4f4",
+                    border: "1.6px solid #989898",
                   }}
                 >
-                  <label for="outside">
-                    <input
-                      type="radio"
-                      id="outside"
-                      name="location"
-                      value="Outside"
-                    />
-                    Outside
-                  </label>
-                  <label for="inside">
-                    <input
-                      type="radio"
-                      id="inside"
-                      name="location"
-                      value="Inside"
-                      checked
-                    />
-                    Inside
-                  </label>
-                </arguments>
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                </select>
               </section>
             </fieldset>
             <fieldset className="form-section section-client">
@@ -109,4 +118,4 @@ function Reservation() {
   );
 }
 
-export default Reservation;
+export default BookingForm;
