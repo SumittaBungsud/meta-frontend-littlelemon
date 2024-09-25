@@ -4,12 +4,12 @@ import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 
 function FoodCard({ menu }) {
   return (
-    <div className="foodCard-container">
-      <div className="foodCard">
+    <fragment className="foodCard-container">
+      <fragment className="foodCard">
         <img src={menu.image} alt={menu.name} />
         <article>
-          <div>
-            <div
+          <section>
+            <section
               style={{
                 display: "flex",
                 flexFlow: "row wrap",
@@ -21,25 +21,25 @@ function FoodCard({ menu }) {
               <p style={{ color: "#F48414", fontWeight: "bold" }}>
                 {menu.price}
               </p>
-            </div>
-            <div
+            </section>
+            <section
               style={{
                 textAlign: "start",
                 padding: "0 15px",
               }}
             >
               <p>{menu.description}</p>
-            </div>
-          </div>
-          <div className="foodCard-footer">
+            </section>
+          </section>
+          <section className="foodCard-footer">
             <p>Order Delivery</p>
             <span style={{ paddingLeft: "15px" }}>
               <FontAwesomeIcon icon={faBicycle} />
             </span>
-          </div>
+          </section>
         </article>
-      </div>
-    </div>
+      </fragment>
+    </fragment>
   );
 }
 

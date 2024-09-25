@@ -30,12 +30,12 @@ const menuHighlight = [
 
 function Highlight() {
   return (
-    <section className="highlight-container">
-      <div className="highlight-header">
+    <fragment className="highlight-container">
+      <section className="highlight-header">
         <h1>This weeks specials!</h1>
         <button className="button">Online Menu</button>
-      </div>
-      <div
+      </section>
+      <datalist
         style={{
           display: "flex",
           flexFlow: "row wrap",
@@ -46,8 +46,8 @@ function Highlight() {
         {menuHighlight.map((menu) => (
           <FoodCard key={menu.name} menu={menu} />
         ))}
-      </div>
-    </section>
+      </datalist>
+    </fragment>
   );
 }
 

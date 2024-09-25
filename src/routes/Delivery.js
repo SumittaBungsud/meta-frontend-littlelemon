@@ -3,10 +3,10 @@ import Header from "../components/Header";
 
 function Delivery() {
   return (
-    <div id="delivery">
+    <fragment id="delivery">
       <Header />
-      <div className="container">Delivery</div>
-    </div>
+      <section className="container">Delivery</section>
+    </fragment>
   );
 }
 

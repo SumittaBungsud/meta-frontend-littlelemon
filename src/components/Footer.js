@@ -6,11 +6,11 @@ import { navigations, contacts, socialMedias } from "../sources/footerLinks";
 function Footer() {
   return (
     <footer className="footer-container">
-      <div>
+      <section>
         <img src={logoFooter} alt="footer logo" className="footer-logo" />
-      </div>
-      <div className="footer-body">
-        <div className="footer-body-item">
+      </section>
+      <article className="footer-body">
+        <section className="footer-body-item">
           <h4>Doormat Navigation</h4>
           <ul>
             {navigations.map((item) => (
@@ -19,8 +19,8 @@ function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="footer-body-item">
+        </section>
+        <section className="footer-body-item">
           <h4>Contact</h4>
           <ul>
             {contacts.map((item) => (
@@ -30,8 +30,8 @@ function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="footer-body-item">
+        </section>
+        <section className="footer-body-item">
           <h4>Social Media</h4>
           <ul>
             {socialMedias.map((item) => (
@@ -43,8 +43,8 @@ function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
+        </section>
+      </article>
     </footer>
   );
 }

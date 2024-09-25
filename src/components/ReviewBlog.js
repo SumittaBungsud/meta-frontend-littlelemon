@@ -4,8 +4,8 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function ReviewBlog({ review }) {
   return (
-    <div className="review-blog">
-      <div
+    <fragment className="review-blog">
+      <section
         style={{
           display: "flex",
           flexDirection: "row",
@@ -17,19 +17,19 @@ function ReviewBlog({ review }) {
       >
         <h1 style={{ marginRight: "1em" }}> {review.rating}</h1>
         <h1>{review.stars}</h1>
-      </div>
-      <div
+      </section>
+      <section
         style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
       >
-        <div className="review-icon">
+        <fragment className="review-icon">
           <FontAwesomeIcon icon={faUser} />
-        </div>
+        </fragment>
         <h1>{review.name}</h1>
-      </div>
-      <div>
+      </section>
+      <section>
         <p style={{ textAlign: "start", padding: "0 2em" }}>{review.comment}</p>
-      </div>
-    </div>
+      </section>
+    </fragment>
   );
 }
 

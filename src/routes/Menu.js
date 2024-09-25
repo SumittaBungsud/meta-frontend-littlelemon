@@ -13,16 +13,16 @@ function Menu() {
   }, []);
 
   return (
-    <div id="menu">
+    <fragment id="menu">
       <Header />
-      <div className="container menu-container">
+      <section className="container menu-container">
         <h1>Menu</h1>
-        <div className="menu-list">
+        <datalist className="menu-list">
           {menulist.length > 0 &&
             menulist.map((food) => <MenuItem key={food._id} food={food} />)}
-        </div>
-      </div>
-    </div>
+        </datalist>
+      </section>
+    </fragment>
   );
 }
 

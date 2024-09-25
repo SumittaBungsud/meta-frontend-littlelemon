@@ -38,18 +38,18 @@ const userReviews = [
 
 function Testimonial() {
   return (
-    <section className="testimonial">
-      <div>
-        <div style={{ fontSize: "1.7em" }}>
+    <fragment className="testimonial">
+      <section>
+        <label style={{ fontSize: "1.7em" }}>
           <h1>What's people say</h1>
-        </div>
+        </label>
         <article>
           {userReviews.map((review) => (
             <ReviewBlog key={review.name} review={review} />
           ))}
         </article>
-      </div>
-    </section>
+      </section>
+    </fragment>
   );
 }
 

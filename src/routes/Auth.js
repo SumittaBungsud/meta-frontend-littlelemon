@@ -5,11 +5,11 @@ function Auth() {
   const [isLogin, setLogin] = useState(true);
 
   return (
-    <div id="auth">
+    <fragment id="auth">
       <Header />
-      <section className="container">
-        <div className="auth-container">
-          <div className="auth-body">
+      <form className="container">
+        <fieldset className="auth-container">
+          <section className="auth-body">
             <h3>{isLogin ? "Login" : "Signup"}</h3>
             <input id="email" name="email" type="email" placeholder="Email" />
             <input
@@ -18,7 +18,7 @@ function Auth() {
               type="password"
               placeholder="Password"
             />
-          </div>
+          </section>
           <section className="auth-footer">
             <button className="button" type="submit">
               {isLogin ? "Login" : "Signup"}
@@ -27,9 +27,9 @@ function Auth() {
               {isLogin ? "Signup" : "Login"}
             </button>
           </section>
-        </div>
-      </section>
-    </div>
+        </fieldset>
+      </form>
+    </fragment>
   );
 }
 

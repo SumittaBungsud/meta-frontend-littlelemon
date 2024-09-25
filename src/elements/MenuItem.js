@@ -3,8 +3,8 @@ import CountButton from "./CountButton";
 
 function MenuItem({ food }) {
   return (
-    <div className="menuItem">
-      <div>
+    <fragment className="menuItem">
+      <section>
         <img src={food.image} alt={food.name} />
         <p
           style={{
@@ -15,12 +15,12 @@ function MenuItem({ food }) {
         >
           {food.name}
         </p>
-      </div>
-      <div className="menuItem-footer">
+      </section>
+      <section className="menuItem-footer">
         <p>{food.price}</p>
         <CountButton color="#495E57" />
-      </div>
-    </div>
+      </section>
+    </fragment>
   );
 }
 

@@ -4,7 +4,7 @@ import heroImg from "../img/restauranfood.jpg";
 function Hero() {
   return (
     <section id="home">
-      <div
+      <fragment
         className="hero"
         style={{
           backgroundColor: "#495E57",
@@ -44,7 +44,7 @@ function Hero() {
           <button className="button">Reserve a Table</button>
         </section>
         <img src={heroImg} alt="restaurant food" />
-      </div>
+      </fragment>
     </section>
   );
 }

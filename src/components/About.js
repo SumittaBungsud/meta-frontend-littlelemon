@@ -5,7 +5,7 @@ import chefImg from "../img/restaurant chef B.jpg";
 function About() {
   return (
     <section id="about" className="about-container">
-      <div className="about-body">
+      <fragment className="about-body">
         <article>
           <h1 style={{ lineHeight: "0" }}>Little Lemon</h1>
           <h4>Chicago</h4>
@@ -19,15 +19,15 @@ function About() {
             gusto.
           </p>
         </article>
-        <div style={{ marginLeft: "6em" }}>
+        <section style={{ marginLeft: "6em" }}>
           <img className="aboutImg about-img1" src={resImg} alt="restaurant" />
           <img
             className="aboutImg about-img2"
             src={chefImg}
             alt="restaurant chef B"
           />
-        </div>
-      </div>
+        </section>
+      </fragment>
     </section>
   );
 }
