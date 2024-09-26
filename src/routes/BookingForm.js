@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import resImg from "../img/restaurant.jpg";
 
 function BookingForm() {
-  const [currDate, setCurrDate] = useState("2024-06-05");
+  const [currDate, setCurrDate] = useState("");
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -34,8 +34,8 @@ function BookingForm() {
                   id="table"
                   name="table"
                   type="number"
-                  max={10}
                   min={1}
+                  max={10}
                   placeholder="Choose up to 10"
                 />
               </section>
@@ -47,8 +47,8 @@ function BookingForm() {
                   id="people"
                   name="people"
                   type="number"
-                  max={10}
                   min={1}
+                  max={10}
                   placeholder="Choose up to 10"
                 />
               </section>
@@ -81,6 +81,7 @@ function BookingForm() {
                     border: "1.6px solid #989898",
                   }}
                 >
+                  <option>None</option>
                   <option>Birthday</option>
                   <option>Anniversary</option>
                 </select>
@@ -90,7 +91,12 @@ function BookingForm() {
               <h2>Customer Information</h2>
               <section className="form-item">
                 <label className="form-label-group">Customer name</label>
-                <input type="text" placeholder="Type full name" />
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Type full name"
+                />
               </section>
               <section className="form-item">
                 <label className="form-label-group">
@@ -99,11 +105,21 @@ function BookingForm() {
                 <section>
                   <section className="form-item">
                     <label>Email</label>
-                    <input type="email" placeholder="example@email.com" />
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="example@email.com"
+                    />
                   </section>
                   <section className="form-item">
                     <label>Phone number</label>
-                    <input type="tel" placeholder="99-999-9999" />
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="99-999-9999"
+                    />
                   </section>
                 </section>
               </section>

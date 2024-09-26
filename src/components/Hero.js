@@ -1,7 +1,10 @@
 import React from "react";
 import heroImg from "../img/restauranfood.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section id="home">
       <fragment
@@ -41,7 +44,9 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className="button">Reserve a Table</button>
+          <button onClick={() => navigate("/reservation")} className="button">
+            Reserve a Table
+          </button>
         </section>
         <img src={heroImg} alt="restaurant food" />
       </fragment>
