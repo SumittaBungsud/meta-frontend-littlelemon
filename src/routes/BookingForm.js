@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import resImg from "../img/restaurant.jpg";
-import useForm from "../sources/formController";
+import useForm from "../sources/useForm";
 
 function BookingForm() {
   const [currDate, setCurrDate] = useState("");
@@ -20,7 +20,7 @@ function BookingForm() {
 
   const handleBooking = (e) => {
     e.preventDefault();
-    console.log(bookingForm.values);
+    alert(JSON.stringify(bookingForm.values, null, 2));
   };
 
   useEffect(() => {
