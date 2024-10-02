@@ -1,36 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Header from "../components/Header";
+import ConfirmBooking from "../components/ConfirmBooking";
 import resImg from "../img/restaurant.jpg";
-import useForm from "../sources/useForm";
+import { FormContext } from "../sources/contexts/FormProvider";
 
 function BookingForm() {
   const [currDate, setCurrDate] = useState("");
+  const [isConfirm, setConfirm] = useState(false);
+  const { setForm, values, formAttributes } = useContext(FormContext);
+  const maxTime = "22:00";
+  const minTime = "17:00";
   const initialize = {
     name: "",
     email: "",
     phone: "",
-    table: 0,
-    people: 0,
+    table: 1,
+    people: 1,
     date: new Date(),
-    time: "",
-    occasion: "",
+    time: minTime,
+    occasion: "Birthday",
   };
-
-  const bookingForm = useForm(initialize);
 
   const handleBooking = (e) => {
     e.preventDefault();
-    alert(JSON.stringify(bookingForm.values, null, 2));
+    // alert(JSON.stringify(values, null, 2));
+    setConfirm(true);
   };
 
   useEffect(() => {
     const minDate = new Date().toISOString().substring(0, 10);
     setCurrDate(minDate);
+    setForm(initialize);
   }, []);
 
   return (
     <fragment id="reservation">
       <Header />
+      {isConfirm && <ConfirmBooking formData={values} onConfirm={setConfirm} />}
       <div className="container reserv-container">
         <h1>Reservation</h1>
         <img src={resImg} alt="restaurant" />
@@ -44,17 +50,19 @@ function BookingForm() {
                 </label>
                 <input
                   id="table"
+                  test-id="table"
                   name="table"
                   type="number"
                   min={1}
                   max={10}
                   placeholder="Choose up to 10"
-                  {...bookingForm.formAttributes("table")}
+                  {...formAttributes("table")}
+                  required
                 />
               </section>
               <section className="form-item">
                 <label htmlFor="people" className="form-label-group">
-                  The number of people
+                  How many people?
                 </label>
                 <input
                   id="people"
@@ -63,62 +71,81 @@ function BookingForm() {
                   min={1}
                   max={10}
                   placeholder="Choose up to 10"
-                  {...bookingForm.formAttributes("people")}
+                  {...formAttributes("people")}
+                  required
                 />
               </section>
               <section className="form-item">
                 <label htmlFor="date" className="form-label-group">
-                  Date
+                  Choose Date
                 </label>
                 <input
                   id="date"
                   name="date"
                   type="date"
                   min={currDate}
-                  {...bookingForm.formAttributes("date")}
+                  {...formAttributes("date")}
+                  required
                 />
               </section>
               <section className="form-item">
                 <label htmlFor="time" className="form-label-group">
-                  Time (11:00 - 21:00)
+                  Choose Time ({minTime} - {maxTime})
                 </label>
-                <input
+                <select
                   id="time"
                   name="time"
-                  type="time"
-                  min="11:00"
-                  max="21:00"
-                  {...bookingForm.formAttributes("time")}
-                />
-              </section>
-              <section className="form-item">
-                <label className="form-label-group">Occasion</label>
-                <select
-                  id="occasion"
                   className="form-item"
                   style={{
                     borderRadius: "0.4rem",
                     backgroundColor: "#f4f4f4",
                     border: "1.6px solid #989898",
                   }}
-                  {...bookingForm.formAttributes("occasion")}
+                  {...formAttributes("time")}
+                  required
                 >
-                  <option>None</option>
-                  <option>Birthday</option>
-                  <option>Anniversary</option>
+                  <option>17:00</option>
+                  <option>18:00</option>
+                  <option>19:00</option>
+                  <option>20:00</option>
+                  <option>21:00</option>
+                  <option>22:00</option>
+                </select>
+              </section>
+              <section className="form-item">
+                <label htmlFor="occasion" className="form-label-group">
+                  Occasion
+                </label>
+                <select
+                  id="occasion"
+                  name="occasion"
+                  className="form-item"
+                  style={{
+                    borderRadius: "0.4rem",
+                    backgroundColor: "#f4f4f4",
+                    border: "1.6px solid #989898",
+                  }}
+                  {...formAttributes("occasion")}
+                  required
+                >
+                  <option value="Birthday">Birthday</option>
+                  <option value="Anniversary">Anniversary</option>
                 </select>
               </section>
             </fieldset>
             <fieldset className="form-section section-client">
               <h2>Customer Information</h2>
               <section className="form-item">
-                <label className="form-label-group">Customer name</label>
+                <label htmlFor="name" className="form-label-group">
+                  Customer name
+                </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
                   placeholder="Type full name"
-                  {...bookingForm.formAttributes("name")}
+                  {...formAttributes("name")}
+                  required
                 />
               </section>
               <section className="form-item">
@@ -127,23 +154,23 @@ function BookingForm() {
                 </label>
                 <section>
                   <section className="form-item">
-                    <label>Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                       id="email"
                       name="email"
                       type="email"
                       placeholder="example@email.com"
-                      {...bookingForm.formAttributes("email")}
+                      {...formAttributes("email")}
                     />
                   </section>
                   <section className="form-item">
-                    <label>Phone number</label>
+                    <label htmlFor="phone">Phone number</label>
                     <input
                       id="phone"
                       name="phone"
                       type="tel"
                       placeholder="99-999-9999"
-                      {...bookingForm.formAttributes("phone")}
+                      {...formAttributes("phone")}
                     />
                   </section>
                 </section>

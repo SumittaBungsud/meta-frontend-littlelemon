@@ -24,3 +24,20 @@ export const getMeals = async () => {
 
   return addPrice;
 };
+
+export const getExternalAPI = async () => {
+  const data = await axios
+    .get("https://raw.githubusercontent.com/courseraap/capstone/main/api.js")
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+
+  return data;
+};
+
+export const getLongDate = (date) => {
+  const day = date.toString().substring(8, 10);
+  const month = date.toString().substring(4, 7);
+  const year = date.toString().substring(11, 15);
+  const longDate = `${day} ${month} ${year}`;
+  return longDate;
+};

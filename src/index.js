@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./styles/App.css";
+import "./styles/pages.css";
 import router from "./sources/routers";
 import { RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import { FormProvider } from "./sources/contexts/FormProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FormProvider>
+      <RouterProvider router={router} />
+    </FormProvider>
   </React.StrictMode>
 );
 

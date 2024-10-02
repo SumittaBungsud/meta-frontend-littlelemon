@@ -21,7 +21,7 @@ function CountButton({ color }) {
   };
 
   return (
-    <fragment
+    <article
       style={{
         display: "flex",
         flexDirection: "row",
@@ -30,14 +30,20 @@ function CountButton({ color }) {
         color: color,
       }}
     >
-      <fragment style={{ marginRight: "7px" }} onClick={deductAmount}>
+      <button
+        style={{ marginRight: "7px", background: "none", border: "none" }}
+        onClick={deductAmount}
+      >
         <Icon size="2xl" icon={faSquareMinus} />
-      </fragment>
+      </button>
       {counter}
-      <fragment style={{ marginLeft: "7px" }} onClick={addAmount}>
+      <button
+        style={{ marginLeft: "7px", background: "none", border: "none" }}
+        onClick={addAmount}
+      >
         <Icon size="2xl" icon={faSquarePlus} />
-      </fragment>
-    </fragment>
+      </button>
+    </article>
   );
 }
 
