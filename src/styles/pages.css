@@ -44,7 +44,39 @@
   align-items: center;
   font-size: large;
   font-weight: 700;
+}
+.menuItem-footer .price {
   color: #e1951c;
+}
+
+@media only screen and (max-width: 760px) {
+  .container {
+    padding: 10rem 0.5rem 0 0.5rem;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+  .menuItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100vw;
+    margin: 1.2rem;
+  }
+  .menuItem img {
+    width: 150px;
+    height: 175px;
+  }
+  .menuItem-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 1rem 0 1rem 0;
+    font-size: medium;
+  }
 }
 
 .reserv-container {
@@ -123,11 +155,52 @@
   border-radius: 2rem;
   border-bottom: 2px solid #ababab;
 }
+.form-submit {
+  right: 3rem;
+  bottom: 1.5rem;
+}
 .section-book {
   margin-right: 1.5rem;
 }
 .section-client {
   margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 760px) {
+  .reserv-body {
+    margin: 2rem 0.5rem;
+    padding: 1rem 1rem;
+  }
+  .reserv-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .reserv-container > img {
+    visibility: hidden;
+  }
+  .form-section {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  .form-section > h2 {
+    font-size: 1.3rem;
+    border-radius: 0;
+    border-bottom: 0 solid #ababab;
+  }
+  .form-submit input {
+    width: 75vw;
+    padding: 0.6rem 5rem;
+  }
+  .form-submit {
+    padding: 0 1rem;
+  }
+  .section-book {
+    margin-right: 0;
+  }
+  .section-client {
+    margin-left: 0;
+    margin-bottom: 6rem;
+  }
 }
 
 .auth-container {
@@ -185,6 +258,16 @@
   background: none;
 }
 
+@media only screen and (max-width: 760px) {
+  .auth-container {
+    max-width: 100vmin;
+    margin: 3rem 1rem;
+  }
+  .auth-body input {
+    width: 60vmin;
+  }
+}
+
 #confirmbox {
   position: fixed;
   top: 25%;
@@ -232,7 +315,7 @@
   justify-content: center;
 }
 .confirm-header .detail p {
-  color: #c4c4c4;
+  color: #dedede;
   padding: 0.5em 0.5em;
 }
 .confirm-body-container {
@@ -266,6 +349,38 @@
 .confirm-footer .confirm {
   background-color: #9fff94;
   box-shadow: 0 2px 2px #31b422;
+}
+
+@media only screen and (max-width: 760px) {
+  #confirmbox {
+    top: 30%;
+    left: 10%;
+    border-radius: 1em;
+  }
+  .confirm-header {
+    align-items: start;
+    padding: 1rem;
+  }
+  .confirm-header-icon {
+    font-size: 1.6rem;
+    right: 0.5em;
+    top: 0.3em;
+  }
+  .confirm-header h2 {
+    font-size: 1.3em;
+    text-align: left;
+    max-width: 65vw;
+  }
+  .confirm-header .detail p {
+    padding: 0 0.5em;
+  }
+  .confirm-body .item {
+    font-weight: 500;
+  }
+  .confirm-footer button {
+    font-size: 1.1em;
+    border-radius: 0.3rem;
+  }
 }
 
 /* border: 2px solid #000000; */

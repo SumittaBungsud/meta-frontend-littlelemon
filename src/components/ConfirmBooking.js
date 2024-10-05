@@ -37,7 +37,7 @@ function ConfirmBooking({ formData, onConfirm }) {
           <h2>Confirm {formData.name}'s booking?</h2>
           {formData.email === "" && formData.phone === "" ? null : (
             <div className="detail">
-              <p>{formData.phone ?? " - "}</p> <p>|</p>
+              <p>Tel. {formData.phone ?? " - "}</p> <p>|</p>
               <p>{formData.email ?? " - "}</p>
             </div>
           )}
@@ -47,7 +47,7 @@ function ConfirmBooking({ formData, onConfirm }) {
             style={{
               fontSize: "1.2rem",
               fontWeight: "600",
-              margin: "1.5rem 70% 0 2rem",
+              margin: "1.5rem 0 0 2rem",
             }}
           >
             Booking Details
@@ -56,7 +56,9 @@ function ConfirmBooking({ formData, onConfirm }) {
             {bodyForm.map((item) => (
               <div key={item.subject} className="confirm-body-item">
                 <p style={{ color: "#a4a4a4" }}>{item.subject}</p>
-                <p style={{ color: "#000000" }}>{item.value}</p>
+                <p style={{ color: "#000000" }} className="item">
+                  {item.value}
+                </p>
               </div>
             ))}
           </section>
