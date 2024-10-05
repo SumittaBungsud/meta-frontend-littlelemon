@@ -49,12 +49,6 @@ nav li a {
   color: #000000;
 }
 
-.button:hover {
-  color: #ffffff;
-  background-color: #ee9972;
-  border-radius: 0.5rem;
-}
-
 .main-container {
   display: grid;
   grid-template-columns: repeat(12, 1 fr);

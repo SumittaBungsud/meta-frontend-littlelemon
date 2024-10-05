@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./styles/App.css";
 import "./styles/pages.css";
+import "./styles/elementStyle.css";
 import router from "./sources/routers";
 import { RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";

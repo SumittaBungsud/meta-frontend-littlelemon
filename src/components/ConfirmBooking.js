@@ -54,7 +54,7 @@ function ConfirmBooking({ formData, onConfirm }) {
           </p>
           <section className="confirm-body">
             {bodyForm.map((item) => (
-              <div className="confirm-body-item">
+              <div key={item.subject} className="confirm-body-item">
                 <p style={{ color: "#a4a4a4" }}>{item.subject}</p>
                 <p style={{ color: "#000000" }}>{item.value}</p>
               </div>

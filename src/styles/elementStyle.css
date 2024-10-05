@@ -1,0 +1,23 @@
+.button:hover {
+  color: #ffffff;
+  background-color: #ee9972;
+  border-radius: 0.5rem;
+}
+.button:disabled {
+  color: #c8c8c8;
+  background-color: #959595;
+}
+
+.form-item .error {
+  font-size: 0.75rem;
+  margin: auto 0;
+  color: #ed0000;
+}
+.form-item input:invalid {
+  border: 2px solid #ed0000;
+}
+.form-item span {
+  color: #ed0000;
+}
+
+/* border: 2px solid #000000; */

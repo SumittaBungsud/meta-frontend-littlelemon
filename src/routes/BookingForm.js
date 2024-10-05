@@ -1,13 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
 import Header from "../components/Header";
-import ConfirmBooking from "../components/ConfirmBooking";
 import resImg from "../img/restaurant.jpg";
+// const Header = () => {};
+// const resImg = "";
+import ConfirmBooking from "../components/ConfirmBooking";
 import { FormContext } from "../sources/contexts/FormProvider";
 
 function BookingForm() {
   const [currDate, setCurrDate] = useState("");
   const [isConfirm, setConfirm] = useState(false);
-  const { setForm, values, formAttributes } = useContext(FormContext);
+  const { setForm, values, errors, isFormValid, formAttributes } =
+    useContext(FormContext);
   const maxTime = "22:00";
   const minTime = "17:00";
   const initialize = {
@@ -16,12 +19,12 @@ function BookingForm() {
     phone: "",
     table: 1,
     people: 1,
-    date: new Date(),
+    date: "",
     time: minTime,
     occasion: "Birthday",
   };
 
-  const handleBooking = (e) => {
+  const handleBooking = async (e) => {
     e.preventDefault();
     // alert(JSON.stringify(values, null, 2));
     setConfirm(true);
@@ -46,7 +49,7 @@ function BookingForm() {
               <h2>Booking Details</h2>
               <section className="form-item">
                 <label htmlFor="table" className="form-label-group">
-                  Select Tables
+                  Select Tables <span>*</span>
                 </label>
                 <input
                   id="table"
@@ -59,10 +62,13 @@ function BookingForm() {
                   {...formAttributes("table")}
                   required
                 />
+                {errors.table.isValid ? null : (
+                  <p className="error">{errors.table.message}</p>
+                )}
               </section>
               <section className="form-item">
                 <label htmlFor="people" className="form-label-group">
-                  How many people?
+                  How many people? <span>*</span>
                 </label>
                 <input
                   id="people"
@@ -74,10 +80,13 @@ function BookingForm() {
                   {...formAttributes("people")}
                   required
                 />
+                {errors.people.isValid ? null : (
+                  <p className="error">{errors.people.message}</p>
+                )}
               </section>
               <section className="form-item">
                 <label htmlFor="date" className="form-label-group">
-                  Choose Date
+                  Choose Date <span>*</span>
                 </label>
                 <input
                   id="date"
@@ -87,10 +96,13 @@ function BookingForm() {
                   {...formAttributes("date")}
                   required
                 />
+                {errors.date.isValid ? null : (
+                  <p className="error">{errors.date.message}</p>
+                )}
               </section>
               <section className="form-item">
                 <label htmlFor="time" className="form-label-group">
-                  Choose Time ({minTime} - {maxTime})
+                  Choose Time ({minTime} - {maxTime}) <span>*</span>
                 </label>
                 <select
                   id="time"
@@ -111,10 +123,13 @@ function BookingForm() {
                   <option>21:00</option>
                   <option>22:00</option>
                 </select>
+                {errors.time.isValid ? null : (
+                  <p className="error">{errors.time.message}</p>
+                )}
               </section>
               <section className="form-item">
                 <label htmlFor="occasion" className="form-label-group">
-                  Occasion
+                  Occasion <span>*</span>
                 </label>
                 <select
                   id="occasion"
@@ -131,13 +146,16 @@ function BookingForm() {
                   <option value="Birthday">Birthday</option>
                   <option value="Anniversary">Anniversary</option>
                 </select>
+                {errors.occasion.isValid ? null : (
+                  <p className="error">{errors.occasion.message}</p>
+                )}
               </section>
             </fieldset>
             <fieldset className="form-section section-client">
               <h2>Customer Information</h2>
               <section className="form-item">
                 <label htmlFor="name" className="form-label-group">
-                  Customer name
+                  Customer name <span>*</span>
                 </label>
                 <input
                   id="name"
@@ -147,6 +165,9 @@ function BookingForm() {
                   {...formAttributes("name")}
                   required
                 />
+                {errors.name.isValid ? null : (
+                  <p className="error">{errors.name.message}</p>
+                )}
               </section>
               <section className="form-item">
                 <label className="form-label-group">
@@ -162,22 +183,38 @@ function BookingForm() {
                       placeholder="example@email.com"
                       {...formAttributes("email")}
                     />
+                    {errors.email.isValid ? null : (
+                      <p className="error">{errors.email.message}</p>
+                    )}
                   </section>
                   <section className="form-item">
-                    <label htmlFor="phone">Phone number</label>
+                    <label htmlFor="phone">
+                      Phone number <span>*</span>
+                    </label>
                     <input
                       id="phone"
                       name="phone"
                       type="tel"
                       placeholder="99-999-9999"
+                      pattern="([0-9]{10})"
+                      max={10}
                       {...formAttributes("phone")}
+                      required
                     />
+                    {errors.phone.isValid ? null : (
+                      <p className="error">{errors.phone.message}</p>
+                    )}
                   </section>
                 </section>
               </section>
             </fieldset>
             <section className="form-submit">
-              <input className="button" type="submit" value="Book a Table" />
+              <input
+                disabled={!isFormValid}
+                className="button"
+                type="submit"
+                value="Book a Table"
+              />
             </section>
           </form>
         </div>
