@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 function Delivery() {
   return (
-    <fragment id="delivery">
+    <fragment id="delivery" aria-label="online delivery page">
       <Header />
       <section className="container">Delivery</section>
     </fragment>

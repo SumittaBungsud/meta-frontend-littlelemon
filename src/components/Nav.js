@@ -4,9 +4,9 @@ import { navigations } from "../sources/footerLinks";
 function Nav() {
   return (
     <nav>
-      <ul>
+      <ul role="menubar">
         {navigations.map((item) => (
-          <li key={item.name}>
+          <li key={item.name} role="link">
             <a className="button" href={item.link}>
               {item.name}
             </a>

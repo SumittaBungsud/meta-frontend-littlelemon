@@ -21,7 +21,7 @@ function CountButton({ color }) {
   };
 
   return (
-    <article
+    <section
       style={{
         display: "flex",
         flexDirection: "row",
@@ -33,6 +33,8 @@ function CountButton({ color }) {
       <button
         style={{ marginRight: "7px", background: "none", border: "none" }}
         onClick={deductAmount}
+        role="button"
+        aria-label="adding item button"
       >
         <Icon size="2xl" icon={faSquareMinus} />
       </button>
@@ -40,10 +42,12 @@ function CountButton({ color }) {
       <button
         style={{ marginLeft: "7px", background: "none", border: "none" }}
         onClick={addAmount}
+        role="button"
+        aria-label="deducting item button"
       >
         <Icon size="2xl" icon={faSquarePlus} />
       </button>
-    </article>
+    </section>
   );
 }
 

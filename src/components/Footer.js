@@ -6,11 +6,15 @@ import { navigations, contacts, socialMedias } from "../sources/footerLinks";
 function Footer() {
   return (
     <footer className="footer-container">
-      <section>
-        <img src={logoFooter} alt="footer logo" className="footer-logo" />
-      </section>
+      <figure>
+        <img
+          src={logoFooter}
+          alt="little lemon's footer logo"
+          className="footer-logo"
+        />
+      </figure>
       <article className="footer-body">
-        <section className="footer-body-item">
+        <section className="footer-body-item" aria-label="navigation link">
           <h4>Doormat Navigation</h4>
           <ul>
             {navigations.map((item) => (
@@ -20,7 +24,7 @@ function Footer() {
             ))}
           </ul>
         </section>
-        <section className="footer-body-item">
+        <section className="footer-body-item" aria-label="contact info.">
           <h4>Contact</h4>
           <ul>
             {contacts.map((item) => (
@@ -31,7 +35,7 @@ function Footer() {
             ))}
           </ul>
         </section>
-        <section className="footer-body-item">
+        <section className="footer-body-item" aria-label="social media links">
           <h4>Social Media</h4>
           <ul>
             {socialMedias.map((item) => (

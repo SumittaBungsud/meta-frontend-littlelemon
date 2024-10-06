@@ -13,16 +13,16 @@ function Menu() {
   }, []);
 
   return (
-    <fragment id="menu">
+    <section id="menu" aria-label="menu list selection page">
       <Header />
       <section className="container menu-container">
         <h1>Menu</h1>
-        <datalist className="menu-list">
+        <datalist className="menu-list" role="list">
           {menulist.length > 0 &&
             menulist.map((food) => <MenuItem key={food._id} food={food} />)}
         </datalist>
       </section>
-    </fragment>
+    </section>
   );
 }
 

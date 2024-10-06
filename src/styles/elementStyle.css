@@ -16,8 +16,21 @@
 .form-item input:invalid {
   border: 2px solid #ed0000;
 }
-.form-item span {
+.form-item > label > span {
   color: #ed0000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.form-item-input span {
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: #47d008;
+  visibility: hidden;
+}
+.form-item-input input:valid + span,
+.form-item-input select:valid + span {
+  visibility: visible;
 }
 
 /* border: 2px solid #000000; */

@@ -30,11 +30,11 @@ const menuHighlight = [
 
 function Highlight() {
   return (
-    <fragment className="highlight-container">
-      <section className="highlight-header">
+    <section className="highlight-container" aria-label="highlight">
+      <article className="highlight-header">
         <h1>This weeks specials!</h1>
         <button className="button">Online Menu</button>
-      </section>
+      </article>
       <datalist
         style={{
           display: "flex",
@@ -42,12 +42,13 @@ function Highlight() {
           justifyContent: "center",
           padding: "3rem auto",
         }}
+        aria-label="highlight special list"
       >
         {menuHighlight.map((menu) => (
           <FoodCard key={menu.name} menu={menu} />
         ))}
       </datalist>
-    </fragment>
+    </section>
   );
 }
 

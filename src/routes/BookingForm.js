@@ -5,6 +5,8 @@ import resImg from "../img/restaurant.jpg";
 // const resImg = "";
 import ConfirmBooking from "../components/ConfirmBooking";
 import { FormContext } from "../sources/contexts/FormProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 function BookingForm() {
   const [currDate, setCurrDate] = useState("");
@@ -37,13 +39,13 @@ function BookingForm() {
   }, []);
 
   return (
-    <fragment id="reservation">
+    <fragment id="reservation" aria-label="reservation page">
       <Header />
       {isConfirm && <ConfirmBooking formData={values} onConfirm={setConfirm} />}
-      <div className="container reserv-container">
+      <section className="container reserv-container">
         <h1>Reservation</h1>
         <img src={resImg} alt="restaurant" />
-        <div className="reserv-body">
+        <section className="reserv-body">
           <form onSubmit={handleBooking} className="reserv-form">
             <fieldset className="form-section section-book">
               <h2>Booking Details</h2>
@@ -51,17 +53,22 @@ function BookingForm() {
                 <label htmlFor="table" className="form-label-group">
                   Select Tables <span>*</span>
                 </label>
-                <input
-                  id="table"
-                  test-id="table"
-                  name="table"
-                  type="number"
-                  min={1}
-                  max={10}
-                  placeholder="Choose up to 10"
-                  {...formAttributes("table")}
-                  required
-                />
+                <article className="form-item-input">
+                  <input
+                    id="table"
+                    test-id="table"
+                    name="table"
+                    type="number"
+                    min={1}
+                    max={10}
+                    placeholder="Choose up to 10"
+                    {...formAttributes("table")}
+                    required
+                  />
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.table.isValid ? null : (
                   <p className="error">{errors.table.message}</p>
                 )}
@@ -70,16 +77,21 @@ function BookingForm() {
                 <label htmlFor="people" className="form-label-group">
                   How many people? <span>*</span>
                 </label>
-                <input
-                  id="people"
-                  name="people"
-                  type="number"
-                  min={1}
-                  max={10}
-                  placeholder="Choose up to 10"
-                  {...formAttributes("people")}
-                  required
-                />
+                <article className="form-item-input">
+                  <input
+                    id="people"
+                    name="people"
+                    type="number"
+                    min={1}
+                    max={10}
+                    placeholder="Choose up to 10"
+                    {...formAttributes("people")}
+                    required
+                  />
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.people.isValid ? null : (
                   <p className="error">{errors.people.message}</p>
                 )}
@@ -88,14 +100,19 @@ function BookingForm() {
                 <label htmlFor="date" className="form-label-group">
                   Choose Date <span>*</span>
                 </label>
-                <input
-                  id="date"
-                  name="date"
-                  type="date"
-                  min={currDate}
-                  {...formAttributes("date")}
-                  required
-                />
+                <article className="form-item-input">
+                  <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    min={currDate}
+                    {...formAttributes("date")}
+                    required
+                  />
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.date.isValid ? null : (
                   <p className="error">{errors.date.message}</p>
                 )}
@@ -104,25 +121,31 @@ function BookingForm() {
                 <label htmlFor="time" className="form-label-group">
                   Choose Time ({minTime} - {maxTime}) <span>*</span>
                 </label>
-                <select
-                  id="time"
-                  name="time"
-                  className="form-item"
-                  style={{
-                    borderRadius: "0.4rem",
-                    backgroundColor: "#f4f4f4",
-                    border: "1.6px solid #989898",
-                  }}
-                  {...formAttributes("time")}
-                  required
-                >
-                  <option>17:00</option>
-                  <option>18:00</option>
-                  <option>19:00</option>
-                  <option>20:00</option>
-                  <option>21:00</option>
-                  <option>22:00</option>
-                </select>
+                <article className="form-item-input">
+                  <select
+                    id="time"
+                    name="time"
+                    className="form-item"
+                    style={{
+                      borderRadius: "0.4rem",
+                      backgroundColor: "#f4f4f4",
+                      border: "1.6px solid #989898",
+                      flex: "10",
+                    }}
+                    {...formAttributes("time")}
+                    required
+                  >
+                    <option>17:00</option>
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+                    <option>21:00</option>
+                    <option>22:00</option>
+                  </select>
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.time.isValid ? null : (
                   <p className="error">{errors.time.message}</p>
                 )}
@@ -131,21 +154,27 @@ function BookingForm() {
                 <label htmlFor="occasion" className="form-label-group">
                   Occasion <span>*</span>
                 </label>
-                <select
-                  id="occasion"
-                  name="occasion"
-                  className="form-item"
-                  style={{
-                    borderRadius: "0.4rem",
-                    backgroundColor: "#f4f4f4",
-                    border: "1.6px solid #989898",
-                  }}
-                  {...formAttributes("occasion")}
-                  required
-                >
-                  <option value="Birthday">Birthday</option>
-                  <option value="Anniversary">Anniversary</option>
-                </select>
+                <article className="form-item-input">
+                  <select
+                    id="occasion"
+                    name="occasion"
+                    className="form-item"
+                    style={{
+                      borderRadius: "0.4rem",
+                      backgroundColor: "#f4f4f4",
+                      border: "1.6px solid #989898",
+                      flex: "10",
+                    }}
+                    {...formAttributes("occasion")}
+                    required
+                  >
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                  </select>
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.occasion.isValid ? null : (
                   <p className="error">{errors.occasion.message}</p>
                 )}
@@ -157,14 +186,19 @@ function BookingForm() {
                 <label htmlFor="name" className="form-label-group">
                   Customer name <span>*</span>
                 </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Type full name"
-                  {...formAttributes("name")}
-                  required
-                />
+                <article className="form-item-input">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Type full name"
+                    {...formAttributes("name")}
+                    required
+                  />
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                </article>
                 {errors.name.isValid ? null : (
                   <p className="error">{errors.name.message}</p>
                 )}
@@ -174,33 +208,43 @@ function BookingForm() {
                   Contact (email or phone number)
                 </label>
                 <section>
-                  <section className="form-item">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="example@email.com"
-                      {...formAttributes("email")}
-                    />
+                  <section className="form-item subItem">
+                    <label htmlFor="email">Email :</label>
+                    <article className="form-item-input">
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="example@email.com"
+                        {...formAttributes("email")}
+                      />
+                      <span>
+                        <FontAwesomeIcon icon={faCircleCheck} />
+                      </span>
+                    </article>
                     {errors.email.isValid ? null : (
                       <p className="error">{errors.email.message}</p>
                     )}
                   </section>
-                  <section className="form-item">
+                  <section className="form-item subItem">
                     <label htmlFor="phone">
-                      Phone number <span>*</span>
+                      Phone number : <span>*</span>
                     </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="99-999-9999"
-                      pattern="([0-9]{10})"
-                      max={10}
-                      {...formAttributes("phone")}
-                      required
-                    />
+                    <article className="form-item-input">
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="99-999-9999"
+                        pattern="([0-9]{10})"
+                        max={10}
+                        {...formAttributes("phone")}
+                        required
+                      />
+                      <span>
+                        <FontAwesomeIcon icon={faCircleCheck} />
+                      </span>
+                    </article>
                     {errors.phone.isValid ? null : (
                       <p className="error">{errors.phone.message}</p>
                     )}
@@ -217,8 +261,8 @@ function BookingForm() {
               />
             </section>
           </form>
-        </div>
-      </div>
+        </section>
+      </section>
     </fragment>
   );
 }

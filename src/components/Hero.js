@@ -6,8 +6,8 @@ function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section id="home">
-      <fragment
+    <section id="hero" role="banner">
+      <article
         className="hero"
         style={{
           backgroundColor: "#495E57",
@@ -49,7 +49,7 @@ function Hero() {
           </button>
         </section>
         <img src={heroImg} alt="restaurant food" />
-      </fragment>
+      </article>
     </section>
   );
 }

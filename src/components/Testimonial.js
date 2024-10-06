@@ -38,7 +38,7 @@ const userReviews = [
 
 function Testimonial() {
   return (
-    <fragment className="testimonial">
+    <section className="testimonial">
       <section>
         <label style={{ fontSize: "1.7em" }}>
           <h1>What's people say</h1>
@@ -49,7 +49,7 @@ function Testimonial() {
           ))}
         </article>
       </section>
-    </fragment>
+    </section>
   );
 }
 

@@ -4,8 +4,8 @@ import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 
 function FoodCard({ menu }) {
   return (
-    <fragment className="foodCard-container">
-      <fragment className="foodCard">
+    <section className="foodCard-container">
+      <section className="foodCard">
         <img src={menu.image} alt={menu.name} />
         <article>
           <section>
@@ -16,6 +16,7 @@ function FoodCard({ menu }) {
                 justifyContent: "space-between",
                 alignItems: "center",
               }}
+              aria-label="food name and price"
             >
               <h1>{menu.name}</h1>
               <p style={{ color: "#F48414", fontWeight: "bold" }}>
@@ -27,6 +28,7 @@ function FoodCard({ menu }) {
                 textAlign: "start",
                 padding: "0 15px",
               }}
+              aria-label="food description"
             >
               <p>{menu.description}</p>
             </section>
@@ -38,8 +40,8 @@ function FoodCard({ menu }) {
             </span>
           </section>
         </article>
-      </fragment>
-    </fragment>
+      </section>
+    </section>
   );
 }
 

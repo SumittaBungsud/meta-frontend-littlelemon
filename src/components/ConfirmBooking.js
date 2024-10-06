@@ -28,18 +28,27 @@ function ConfirmBooking({ formData, onConfirm }) {
   ];
 
   return (
-    <div id="confirmbox">
+    <section
+      id="confirmbox"
+      role="dialog"
+      aria-labelledby="confirm-header"
+      aria-describedby="confirm-body"
+    >
       <section className="confirm-container">
         <section className="confirm-header">
-          <div className="confirm-header-icon" onClick={() => onConfirm(false)}>
+          <figure
+            className="confirm-header-icon"
+            onClick={() => onConfirm(false)}
+            aria-label="close popup button"
+          >
             <FontAwesomeIcon icon={faCircleXmark} />
-          </div>
+          </figure>
           <h2>Confirm {formData.name}'s booking?</h2>
           {formData.email === "" && formData.phone === "" ? null : (
-            <div className="detail">
+            <article className="detail">
               <p>Tel. {formData.phone ?? " - "}</p> <p>|</p>
               <p>{formData.email ?? " - "}</p>
-            </div>
+            </article>
           )}
         </section>
         <section className="confirm-body-container">
@@ -52,7 +61,7 @@ function ConfirmBooking({ formData, onConfirm }) {
           >
             Booking Details
           </p>
-          <section className="confirm-body">
+          <article className="confirm-body">
             {bodyForm.map((item) => (
               <div key={item.subject} className="confirm-body-item">
                 <p style={{ color: "#a4a4a4" }}>{item.subject}</p>
@@ -61,7 +70,7 @@ function ConfirmBooking({ formData, onConfirm }) {
                 </p>
               </div>
             ))}
-          </section>
+          </article>
         </section>
         <section className="confirm-footer">
           <button className="button cancel" onClick={() => onConfirm(false)}>
@@ -72,7 +81,7 @@ function ConfirmBooking({ formData, onConfirm }) {
           </button>
         </section>
       </section>
-    </div>
+    </section>
   );
 }
 

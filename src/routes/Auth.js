@@ -5,7 +5,7 @@ function Auth() {
   const [isLogin, setLogin] = useState(true);
 
   return (
-    <fragment id="auth">
+    <section id="auth" aria-label="authentication page">
       <Header />
       <section className="container">
         <form className="auth-container">
@@ -29,7 +29,7 @@ function Auth() {
           </section>
         </form>
       </section>
-    </fragment>
+    </section>
   );
 }
 
