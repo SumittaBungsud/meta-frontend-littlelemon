@@ -26,7 +26,7 @@ function Delivery() {
       <section className="container deli-container">
         <section className="deli-list" aria-label="food list selection">
           {orders.length > 0 &&
-            orders.map((item) => <FoodAmount foodItem={item} />)}
+            orders.map((item) => <FoodAmount key={item.id} foodItem={item} />)}
         </section>
         <section id="deli-summary">
           <h2>Order summary</h2>
@@ -59,6 +59,7 @@ function Delivery() {
                 maxLength="200"
               />
             </section>
+            <button className="button">Confirm Orders</button>
           </article>
         </section>
       </section>

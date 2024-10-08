@@ -17,9 +17,9 @@ function DeliProvider({ children }) {
     if (foodDelete == null) {
       localStorage.removeItem("foodList");
       setFoodlist([]);
-    } else if (typeof foodDelete === "array") {
-      localStorage.setItem("foodList", JSON.stringify(foodDelete));
-      setFoodlist(foodDelete);
+      // } else if (typeof foodDelete === "array") {
+      //   localStorage.setItem("foodList", JSON.stringify(foodDelete));
+      //   setFoodlist(foodDelete);
     } else {
       localStorage.setItem("foodList", JSON.stringify([foodDelete]));
       setFoodlist([foodDelete]);
