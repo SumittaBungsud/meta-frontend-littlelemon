@@ -3,18 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./styles/App.css";
 import "./styles/pages.css";
+import "./styles/pages2.css";
 import "./styles/elementStyle.css";
 import router from "./sources/routers";
 import { RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { FormProvider } from "./sources/contexts/FormProvider";
+import { DeliProvider } from "./sources/contexts/DeliProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FormProvider>
-      <RouterProvider router={router} />
-    </FormProvider>
+    <DeliProvider>
+      <FormProvider>
+        <RouterProvider router={router} />
+      </FormProvider>
+    </DeliProvider>
   </React.StrictMode>
 );
 

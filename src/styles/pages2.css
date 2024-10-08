@@ -1,0 +1,30 @@
+.deli-summary-details {
+  display: flex;
+  flex-direction: column;
+}
+.deli-summary-details button {
+  background-color: #f4ce14;
+  color: #3a544b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+}
+.deli-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bcbcbc;
+}
+.deli-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.deli-list {
+  margin-right: 3rem;
+  border: 1.5px solid #bcbcbc;
+  border-radius: 1.7rem;
+}

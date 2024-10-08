@@ -46,6 +46,7 @@ nav li a {
   font-weight: 700;
   font-size: large;
   text-decoration: none;
+  border-radius: 0.5rem;
   color: #000000;
 }
 
@@ -131,6 +132,13 @@ nav li a {
   justify-content: space-between;
   padding: 0 17px;
 }
+.foodCard-title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
 .foodCard-footer {
   display: flex;
   flex-direction: row;
@@ -175,11 +183,30 @@ nav li a {
   justify-content: stretch;
 }
 .review-blog {
+  display: flex;
+  flex-direction: column;
   min-width: var(--widthReviewBlog);
-  padding: 1em 2em;
+  padding: 1em 1em;
   margin: 4em 1.2em;
   background-color: #ffffff;
   border-radius: 1.7em;
+}
+.review-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  line-height: 0;
+}
+.review-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 0;
+}
+.review-user h1 {
+  font-size: 1.3rem;
 }
 .review-icon {
   display: flex;
@@ -190,6 +217,7 @@ nav li a {
   font-size: 1.2em;
   border-radius: 50%;
   margin-right: 2.3em;
+  transform: scale(1.4, 1.4);
   color: #5b5b5b;
   background-color: #e0e0e0;
 }

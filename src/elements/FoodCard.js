@@ -10,15 +10,10 @@ function FoodCard({ menu }) {
         <article>
           <section>
             <section
-              style={{
-                display: "flex",
-                flexFlow: "row wrap",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
+              className="foodCard-title"
               aria-label="food name and price"
             >
-              <h1>{menu.name}</h1>
+              <h2>{menu.name}</h2>
               <p style={{ color: "#F48414", fontWeight: "bold" }}>
                 {menu.price}
               </p>

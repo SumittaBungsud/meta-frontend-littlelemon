@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import {
   faSquareMinus,
   faSquarePlus,
 } from "@fortawesome/free-regular-svg-icons";
+import { DeliContext } from "../sources/contexts/DeliProvider";
 
-function CountButton({ color }) {
+function CountButton({ color, deductCallback, addCallback, id }) {
   const [counter, setCounter] = useState(0);
+  const { foodList } = useContext(DeliContext);
 
   const addAmount = () => {
     if (counter < 10) {
@@ -20,28 +22,40 @@ function CountButton({ color }) {
     }
   };
 
+  useEffect(() => {
+    const amount = foodList.find((item) => item.id === id);
+    if (amount) {
+      setCounter(amount.amount);
+    } else {
+      setCounter(0);
+    }
+  }, [foodList]);
+
   return (
     <section
+      className="count-container"
       style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
         color: color,
       }}
     >
       <button
-        style={{ marginRight: "7px", background: "none", border: "none" }}
-        onClick={deductAmount}
+        className="count-button"
+        onClick={() => {
+          deductCallback();
+          deductAmount();
+        }}
         role="button"
         aria-label="adding item button"
       >
         <Icon size="2xl" icon={faSquareMinus} />
       </button>
-      {counter}
+      {counter || 0}
       <button
-        style={{ marginLeft: "7px", background: "none", border: "none" }}
-        onClick={addAmount}
+        className="count-button"
+        onClick={() => {
+          addCallback();
+          addAmount();
+        }}
         role="button"
         aria-label="deducting item button"
       >

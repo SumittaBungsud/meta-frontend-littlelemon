@@ -1,7 +1,7 @@
 .button:hover {
   color: #ffffff;
   background-color: #ee9972;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 .button:disabled {
   color: #c8c8c8;
@@ -31,6 +31,18 @@
 .form-item-input input:valid + span,
 .form-item-input select:valid + span {
   visibility: visible;
+}
+
+.count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.count-button {
+  margin: 0 7px;
+  background: none;
+  border: none;
 }
 
 /* border: 2px solid #000000; */
