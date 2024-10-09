@@ -1,6 +1,7 @@
 {
   "name": "meta-little-lemon",
   "version": "0.1.0",
+  "homepage": "https://SumittaBungsud.github.io/Meta-FrontEnd-LittleLemon",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -26,7 +27,9 @@
     "build": "react-scripts build",
     "test-cache": "jest --clearCache",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +56,7 @@
     "@babel/preset-react": "^7.24.7",
     "@jest/globals": "^29.7.0",
     "babel-jest": "^29.7.0",
+    "gh-pages": "^6.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-environment-jsdom": "^27.5.1",
