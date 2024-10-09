@@ -17,30 +17,9 @@ function Hero() {
         }}
       >
         <section className="hero-container">
-          <h1
-            style={{
-              fontSize: "3.4rem",
-              color: "#F4CE14",
-            }}
-          >
-            Little Lemon
-          </h1>
-          <p
-            style={{
-              fontSize: "1.8rem",
-              color: "#f0f0f0",
-              lineHeight: 0,
-            }}
-          >
-            Chicago
-          </p>
-          <p
-            style={{
-              width: "27rem",
-              fontSize: "1.2rem",
-              color: "#ffffff",
-            }}
-          >
+          <p className="maintitle">Little Lemon</p>
+          <p className="subtitle">Chicago</p>
+          <p className="description">
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>

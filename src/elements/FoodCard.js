@@ -7,7 +7,7 @@ function FoodCard({ menu }) {
     <section className="foodCard-container">
       <section className="foodCard">
         <img src={menu.image} alt={menu.name} />
-        <article>
+        <article className="foodCard-body">
           <section>
             <section
               className="foodCard-title"
@@ -18,13 +18,7 @@ function FoodCard({ menu }) {
                 {menu.price}
               </p>
             </section>
-            <section
-              style={{
-                textAlign: "start",
-                padding: "0 15px",
-              }}
-              aria-label="food description"
-            >
+            <section className="foodCard-des" aria-label="food description">
               <p>{menu.description}</p>
             </section>
           </section>

@@ -7,9 +7,9 @@ function About() {
     <section id="about" className="about-container">
       <section className="about-body">
         <article>
-          <h1 style={{ lineHeight: "0" }}>Little Lemon</h1>
-          <h4>Chicago</h4>
-          <p>
+          <h1 className="about-maintitle">Little Lemon</h1>
+          <h4 className="about-subtitle">Chicago</h4>
+          <p className="about-description">
             From the picturesque coastal towns of the Mediterranean to the heart
             of Bangkok, Mimosa brings an air of riviera to your plate. Led by a
             carefree spirit of conviviality, we offer generous cuisine that
@@ -19,7 +19,7 @@ function About() {
             gusto.
           </p>
         </article>
-        <figure style={{ marginLeft: "6em" }}>
+        <figure>
           <img className="aboutImg about-img1" src={resImg} alt="restaurant" />
           <img
             className="aboutImg about-img2"

@@ -35,15 +35,7 @@ function Highlight() {
         <h1>This weeks specials!</h1>
         <button className="button">Online Menu</button>
       </article>
-      <datalist
-        style={{
-          display: "flex",
-          flexFlow: "row wrap",
-          justifyContent: "center",
-          padding: "3rem auto",
-        }}
-        aria-label="highlight special list"
-      >
+      <datalist className="hi-list" aria-label="highlight special list">
         {menuHighlight.map((menu) => (
           <FoodCard key={menu.name} menu={menu} />
         ))}
