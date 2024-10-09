@@ -1,15 +1,26 @@
+.deli-container {
+  display: grid;
+  grid-template-columns: 1fr 40vmax 25vmax 1fr;
+  grid-gap: 4rem;
+  justify-content: center;
+}
+#deli-summary {
+  grid-column: 3;
+}
 .deli-summary-details {
   display: flex;
   flex-direction: column;
 }
 .deli-summary-details button {
-  background-color: #f4ce14;
-  color: #3a544b;
   font-size: 1.2rem;
   font-weight: bold;
   border-width: 0;
   border-radius: 8px;
   padding: 0.8rem 1.5rem;
+}
+.deli-summary-details .add-btn {
+  background-color: #d7d7d7;
+  color: #205c47;
 }
 .deli-tag {
   display: flex;
@@ -18,17 +29,36 @@
   justify-content: space-between;
   border-bottom: 1px solid #bcbcbc;
 }
-.deli-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 .deli-list {
-  display: flex;
-  flex-flow: column wrap;
-  margin-right: 3rem;
+  grid-column: 2;
+  max-height: 35vmax;
   border: 1.5px solid #bcbcbc;
   border-radius: 1.7rem;
+  line-height: 0;
+  overflow-y: scroll;
+}
+#deli-address {
+  display: flex;
+  flex-direction: column;
+}
+#deli-address input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1.6px solid #989898;
+  margin: 0.2rem 0;
+  background-color: #f4f4f4;
+}
+#deli-address label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.deli-submit {
+  margin-top: 1.5rem;
+  background-color: #f4ce14;
 }
 .orderItem {
   display: flex;
@@ -51,7 +81,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0 1rem;
-  margin-top: 0;
+  line-height: 0;
 }
 .orderItem-footer {
   display: flex;
@@ -64,4 +94,20 @@
 }
 .orderItem-footer .price {
   color: #e1951c;
+  margin: 2rem 0;
 }
+
+@media only screen and (max-width: 760px) {
+  .deli-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15rem;
+    margin: 0 1.5rem;
+  }
+  .deli-list {
+    max-height: 60vmax;
+  }
+}
+
+/* border: 2px solid #000000; */

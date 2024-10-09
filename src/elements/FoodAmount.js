@@ -8,8 +8,8 @@ function FoodAmount({ foodItem }) {
         <section className="orderItem-name">
           <p>{foodItem.name}</p>
         </section>
-        <p className="price">{foodItem.price}</p>
         <section>
+          <p className="price">{foodItem.price}</p>
           <p className="itemNum">Items: {foodItem.amount}</p>
         </section>
       </section>

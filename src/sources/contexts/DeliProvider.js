@@ -12,17 +12,14 @@ function DeliProvider({ children }) {
   };
 
   const deleteFood = (id) => {
-    const foodDelete = foodList.find((item) => item.id !== id);
-
+    const foodDelete = foodList.filter((item) => item.id !== id);
+    console.log(foodDelete);
     if (foodDelete == null) {
       localStorage.removeItem("foodList");
       setFoodlist([]);
-      // } else if (typeof foodDelete === "array") {
-      //   localStorage.setItem("foodList", JSON.stringify(foodDelete));
-      //   setFoodlist(foodDelete);
     } else {
-      localStorage.setItem("foodList", JSON.stringify([foodDelete]));
-      setFoodlist([foodDelete]);
+      localStorage.setItem("foodList", JSON.stringify([...foodDelete]));
+      setFoodlist([...foodDelete]);
     }
   };
 

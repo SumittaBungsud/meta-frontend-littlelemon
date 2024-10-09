@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Header from "../components/Header";
 import FoodAmount from "../elements/FoodAmount";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { DeliContext } from "../sources/contexts/DeliProvider";
 
@@ -34,12 +36,15 @@ function Delivery() {
             className="deli-summary-details"
             aria-label="delivery summary"
           >
-            <button className="button" onClick={() => navigate("/menu")}>
-              Add items
+            <button
+              className="button add-btn"
+              onClick={() => navigate("/menu")}
+            >
+              <FontAwesomeIcon icon={faPlus} /> &nbsp;&nbsp;Add items
             </button>
             <section className="deli-tag">
               <h4>Subtotal </h4>
-              <h3>$ {totalAmount}</h3>
+              <h3>$ {totalAmount.toFixed(2)}</h3>
             </section>
             <section className="deli-tag">
               <h4>Delivery fee </h4>
@@ -49,8 +54,11 @@ function Delivery() {
               <h4>Total </h4>
               <h3>$ {(totalAmount + deliveryFee).toFixed(2)}</h3>
             </section>
-            <section>
-              <h4>Order destination</h4>
+            <section id="deli-address">
+              <label>
+                <FontAwesomeIcon icon={faLocationDot} color="#cd0707" />
+                <h4>Order destination</h4>
+              </label>
               <input
                 id="address"
                 name="address"
@@ -59,7 +67,7 @@ function Delivery() {
                 maxLength="200"
               />
             </section>
-            <button className="button">Confirm Orders</button>
+            <button className="button deli-submit">Confirm Orders</button>
           </article>
         </section>
       </section>
