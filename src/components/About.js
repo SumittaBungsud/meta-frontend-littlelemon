@@ -16,7 +16,7 @@ function About() {
             celebrates the Mediterranean's culinary richness and diversity. Like
             an invitation to relax and enjoy ‘la dolce vita’, our seasonal menus
             focus on high-quality ingredients that are meant to be savoured with
-            gusto.
+            gusto,.
           </p>
         </article>
         <figure>
