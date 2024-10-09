@@ -3,7 +3,7 @@ Coursera course, Meta front-end capstone project creating the food online delive
 
 |Programming tools|UX/UI Design tool|Unit Testing|
 |---              |---              |---         |
-|<ul><li>React application</li><li>Node.js</li><li>Javascript, HTML, CSS</li><li>ChakraUI</li><li>Formik, Yup</li><li>Git</li></ul>|Figma|Jest|
+|<ul><li>React application</li><li>Node.js</li><li>Javascript, HTML, CSS</li><li>Git</li></ul>|Figma|Jest|
 
 <br>
 
