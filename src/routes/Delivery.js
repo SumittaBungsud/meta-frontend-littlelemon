@@ -27,8 +27,19 @@ function Delivery() {
       <Header />
       <section className="container deli-container">
         <section className="deli-list" aria-label="food list selection">
-          {orders.length > 0 &&
-            orders.map((item) => <FoodAmount key={item.id} foodItem={item} />)}
+          {orders.length > 0 ? (
+            orders.map((item) => <FoodAmount key={item.id} foodItem={item} />)
+          ) : (
+            <p
+              style={{
+                textAlign: "center",
+                padding: "2rem 0",
+                fontSize: "1.5rem",
+              }}
+            >
+              No selected order
+            </p>
+          )}
         </section>
         <section id="deli-summary">
           <h2>Order summary</h2>
