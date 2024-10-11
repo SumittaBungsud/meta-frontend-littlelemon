@@ -8,4 +8,4 @@ Coursera course, Meta front-end capstone project creating the food online delive
 <br>
 
 ### 1. To open website Click --> [Little Lemon Home](https://sumittabungsud.github.io/meta-frontend-littlelemon/)
-### 2. To book a table click the Reserv
+### 2. To review booking form click "Reserve a table button"
