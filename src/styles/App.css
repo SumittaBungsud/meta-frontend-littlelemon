@@ -41,11 +41,13 @@ nav ul {
 nav li {
   padding: 1rem 0;
 }
-nav li a {
+nav li .button {
   padding: 1rem 1.5rem;
   font-weight: 700;
   font-size: large;
+  border: none;
   text-decoration: none;
+  background: none;
   border-radius: 0.5rem;
   color: #000000;
 }
