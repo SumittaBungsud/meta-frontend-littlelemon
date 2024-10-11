@@ -7,7 +7,7 @@ import Menu from "../routes/Menu";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/meta-frontend-littlelemon",
     element: <App />,
   },
   {
