@@ -29,7 +29,7 @@ function CountButton({ color, deductCallback, addCallback, id }) {
     } else {
       setCounter(0);
     }
-  }, [foodList]);
+  }, [foodList, id]);
 
   return (
     <section
