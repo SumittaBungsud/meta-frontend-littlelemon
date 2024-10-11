@@ -11,23 +11,23 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/home",
+    path: "/meta-frontend-littlelemon/home",
     element: <App />,
   },
   {
-    path: "/auth",
+    path: "/meta-frontend-littlelemon/auth",
     element: <Auth />,
   },
   {
-    path: "/delivery",
+    path: "/meta-frontend-littlelemon/delivery",
     element: <Delivery />,
   },
   {
-    path: "/reservation",
+    path: "/meta-frontend-littlelemon/reservation",
     element: <BookingForm />,
   },
   {
-    path: "/menu",
+    path: "/meta-frontend-littlelemon/menu",
     element: <Menu />,
   },
 ]);

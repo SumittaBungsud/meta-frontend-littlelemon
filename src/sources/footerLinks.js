@@ -9,27 +9,27 @@ import {
 export const navigations = [
   {
     name: "Home",
-    link: "/",
+    link: "/meta-frontend-littlelemon",
   },
   {
     name: "About",
-    link: "/#about",
+    link: "/meta-frontend-littlelemon/#about",
   },
   {
     name: "Menu",
-    link: "/menu",
+    link: "/meta-frontend-littlelemon/menu",
   },
   {
     name: "Reservation",
-    link: "/reservation",
+    link: "/meta-frontend-littlelemon/reservation",
   },
   {
     name: "Order Online",
-    link: "/delivery",
+    link: "/meta-frontend-littlelemon/delivery",
   },
   {
     name: "Login",
-    link: "/auth",
+    link: "/meta-frontend-littlelemon/auth",
   },
 ];
 

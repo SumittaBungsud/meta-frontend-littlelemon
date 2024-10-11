@@ -23,7 +23,10 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button onClick={() => navigate("/reservation")} className="button">
+          <button
+            onClick={() => navigate("/meta-frontend-littlelemon/reservation")}
+            className="button"
+          >
             Reserve a Table
           </button>
         </section>
