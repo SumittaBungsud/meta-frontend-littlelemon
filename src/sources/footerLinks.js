@@ -13,23 +13,23 @@ export const navigations = [
   },
   {
     name: "About",
-    link: "/meta-frontend-littlelemon/#about",
+    link: "/#about",
   },
   {
     name: "Menu",
-    link: "/meta-frontend-littlelemon/menu",
+    link: "/menu",
   },
   {
     name: "Reservation",
-    link: "/meta-frontend-littlelemon/reservation",
+    link: "/reservation",
   },
   {
     name: "Order Online",
-    link: "/meta-frontend-littlelemon/delivery",
+    link: "/delivery",
   },
   {
     name: "Login",
-    link: "/meta-frontend-littlelemon/auth",
+    link: "/auth",
   },
 ];
 

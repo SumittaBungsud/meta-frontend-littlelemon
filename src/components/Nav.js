@@ -7,7 +7,7 @@ function Nav() {
       <ul role="menubar">
         {navigations.map((item) => (
           <li key={item.name} role="link">
-            <a className="button" href={item.link}>
+            <a role="button" className="button" href={item.link}>
               {item.name}
             </a>
           </li>
