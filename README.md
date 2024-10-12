@@ -1,5 +1,5 @@
 # Meta-FrontEnd-LittleLemon
-Coursera course, Meta front-end capstone project creating the food online delivery web application "Little Lemon" on booking tables and online delivery features.
+Coursera course, Meta front-end capstone project creating the food online delivery web application "Little Lemon" that facilitate customers to book tables and order food as online.
 
 |Programming tools|UX/UI Design tool|Unit Testing|
 |---              |---              |---         |
