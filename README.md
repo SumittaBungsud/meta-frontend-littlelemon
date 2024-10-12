@@ -8,6 +8,5 @@ This course is consisted of UX/UI design processes such as emphatize customer ta
 |<ul><li>React application</li><li>Node.js</li><li>Javascript, HTML, CSS</li><li>Git</li></ul>|Figma|Jest|
 
 <br>
-
 ### Click to try --> [Little Lemon Home](https://sumittabungsud.github.io/meta-frontend-littlelemon/)
 
