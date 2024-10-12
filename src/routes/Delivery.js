@@ -49,7 +49,7 @@ function Delivery() {
           >
             <button
               className="button add-btn"
-              onClick={() => navigate("/menu")}
+              onClick={() => navigate("/meta-frontend-littlelemon/menu")}
             >
               <FontAwesomeIcon icon={faPlus} /> &nbsp;&nbsp;Add items
             </button>

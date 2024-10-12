@@ -24,7 +24,7 @@ function Menu() {
       {foodList.length > 0 && (
         <button
           className="button menu-icon"
-          onClick={() => navigate("/delivery")}
+          onClick={() => navigate("/meta-frontend-littlelemon/delivery")}
         >
           <FontAwesomeIcon icon={faCartShopping} />
         </button>
