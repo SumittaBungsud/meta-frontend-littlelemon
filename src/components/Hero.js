@@ -7,15 +7,7 @@ function Hero() {
 
   return (
     <section id="hero" role="banner">
-      <article
-        className="hero"
-        style={{
-          backgroundColor: "#495E57",
-          width: "100vw",
-          height: "377px",
-          position: "relative",
-        }}
-      >
+      <article className="hero">
         <section className="hero-container">
           <p className="maintitle">Little Lemon</p>
           <p className="subtitle">Chicago</p>

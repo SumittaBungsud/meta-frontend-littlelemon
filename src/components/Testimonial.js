@@ -39,11 +39,11 @@ const userReviews = [
 function Testimonial() {
   return (
     <section className="testimonial">
-      <section>
-        <label style={{ fontSize: "1.7em" }}>
+      <section className="testimonial-contain">
+        <label className="review-title">
           <h1>What's people say</h1>
         </label>
-        <article>
+        <article className="testimonial-body">
           {userReviews.map((review) => (
             <ReviewBlog key={review.name} review={review} />
           ))}
