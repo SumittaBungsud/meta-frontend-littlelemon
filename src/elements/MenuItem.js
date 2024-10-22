@@ -29,17 +29,19 @@ function MenuItem({ food }) {
   return (
     <section className="menuItem" role="listitem">
       <img src={food.image} alt={food.name} />
-      <section className="menuItem-name">
-        <p>{food.name}</p>
-      </section>
-      <section className="menuItem-footer">
-        <p className="price">{food.price}</p>
-        <CountButton
-          color="#495E57"
-          addCallback={addCallback}
-          deductCallback={deductCallback}
-          id={food._id}
-        />
+      <section className="menuItem-body">
+        <section className="menuItem-name">
+          <p>{food.name}</p>
+        </section>
+        <section className="menuItem-footer">
+          <p className="price">{food.price}</p>
+          <CountButton
+            color="#495E57"
+            addCallback={addCallback}
+            deductCallback={deductCallback}
+            id={food._id}
+          />
+        </section>
       </section>
     </section>
   );

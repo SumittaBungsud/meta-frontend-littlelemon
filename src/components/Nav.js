@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 function Nav() {
   const navigate = useNavigate();
   const [winWidth, setWin] = useState(0);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState("hidden");
   const navigateMenu = navigations.map((item) =>
     item.name === "About" ? (
       <li key={item.name} role="link">
@@ -35,15 +35,14 @@ function Nav() {
   useEffect(() => {
     const handleResize = (e) => {
       setWin(e.target.innerWidth);
+      console.log(e.target.innerWidth);
     };
-
-    setOpen(false);
 
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [winWidth, open]);
+  }, [winWidth]);
 
   return winWidth > 760 ? (
     <nav>
@@ -55,13 +54,10 @@ function Nav() {
     <nav>
       <FontAwesomeIcon
         icon={faBars}
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(open === "hidden" ? "visible" : "hidden")}
         className="menubar-icon"
       />
-      <div
-        style={{ visibility: open ? "visible" : "hidden" }}
-        className="menubar-option"
-      >
+      <div style={{ visibility: open }} className="menubar-option">
         <ul id="menubar" role="menubar">
           {navigateMenu}
         </ul>
