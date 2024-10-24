@@ -35,7 +35,6 @@ function Nav() {
   useEffect(() => {
     const handleResize = (e) => {
       setWin(e.target.innerWidth);
-      console.log(e.target.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -43,6 +42,11 @@ function Nav() {
       window.removeEventListener("resize", handleResize);
     };
   }, [winWidth]);
+
+  useEffect(() => {
+    setWin(window.innerWidth);
+    console.log(window.innerWidth);
+  }, []);
 
   return winWidth > 760 ? (
     <nav>
