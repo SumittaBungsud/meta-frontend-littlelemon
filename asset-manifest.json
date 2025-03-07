@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/meta-frontend-littlelemon/static/css/main.53ae54ec.css",
+    "main.css": "/meta-frontend-littlelemon/static/css/main.3d252a29.css",
     "main.js": "/meta-frontend-littlelemon/static/js/main.44d86945.js",
     "static/js/453.5775bd61.chunk.js": "/meta-frontend-littlelemon/static/js/453.5775bd61.chunk.js",
     "static/media/bruchetta.svg": "/meta-frontend-littlelemon/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
@@ -11,12 +11,12 @@
     "static/media/Logo.svg": "/meta-frontend-littlelemon/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
     "static/media/logo_footer.png": "/meta-frontend-littlelemon/static/media/logo_footer.b8445110e4e49b6b30a0.png",
     "index.html": "/meta-frontend-littlelemon/index.html",
-    "main.53ae54ec.css.map": "/meta-frontend-littlelemon/static/css/main.53ae54ec.css.map",
+    "main.3d252a29.css.map": "/meta-frontend-littlelemon/static/css/main.3d252a29.css.map",
     "main.44d86945.js.map": "/meta-frontend-littlelemon/static/js/main.44d86945.js.map",
     "453.5775bd61.chunk.js.map": "/meta-frontend-littlelemon/static/js/453.5775bd61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ae54ec.css",
+    "static/css/main.3d252a29.css",
     "static/js/main.44d86945.js"
   ]
 }
